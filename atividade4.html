@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var produto, precocusto, precovenda, tipo, lucro, calcados
+        calcados = 0
+        for (let i = 1; i < 151; i++){
+            precocusto = parseInt(prompt("Digite o custo de fábrica do " + i + "º produto: "))
+            precovenda = parseInt(prompt("Digite o preço de venda do " + i + "º produto: "))
+            lucro = precovenda - precocusto
+            tipo = prompt("Digite o tipo do " + i + "º produto | V (Vestiário) ou C (Calçado): ")
+            console.log(i + "º produto" + "\nLucro: " + lucro)
+            if (tipo == "C"){
+                calcados++
+            }
+        }
+        console.log("Calçados vendidos: " + calcados)
+    </script>
+</body>
+</html>
